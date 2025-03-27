@@ -1,0 +1,250 @@
+<div id="quiz-wrapper">
+	<div class="close-section">
+		<div class="button-close" id="button-close-quiz" onclick="quizClose()">
+			<img src="img/ui-close.svg"/>
+		</div>
+	</div>
+
+	<div class="panel1" id="panel1">
+		<div class="panel1-content _114-b" id="pan1-cont">Let’s find<br/>the right<br/>iPhone<br/>for you.</div>
+	</div>
+	<div class="panel2" id="panel2" onmouseover="mouseoverPanel()" onmouseout="mouseoutPanel()" onclick="panel2Move(); panel3MoveIn(); panel4MoveIn();">
+		<div class="panel2-content _62-b color-shift__white" id="pan2-cont">Get Started</div>
+	</div>
+	<div class="panel3" id="panel3" onmouseover="mouseoverPanel3()" onmouseout="mouseoutPanel3()">
+		<div class="panel3-content _62-b" id="pan3-cont"><span style="padding-top: 80px;">I prefer a more<br/>compact phone.</span></div>
+	</div>
+	<div class="panel4" id="panel4" onmouseover="mouseoverPanel4()" onmouseout="mouseoutPanel4()" onclick="panel4Move(); panel5MoveIn(); panel6MoveIn(); closeColorShift1();">
+		<div class="panel4-content _62-b color-shift__white" id="pan4-cont">I like cinematic<br/>displays.</div>
+	</div>
+	<div class="panel5" id="panel5" onmouseover="mouseoverPanel5()" onmouseout="mouseoutPanel5()">
+		<div class="panel5-content _62-b" id="pan5-cont"><div style="margin-left: 38px;">I take some<br>photos and video.</div></div>
+	</div>
+	<div class="panel6" id="panel6" onmouseover="mouseoverPanel6()" onmouseout="mouseoutPanel6()" onclick="panel6Move(); panel7MoveIn(); panel8MoveIn();">
+		<div class="panel6-content _62-b" id="pan6-cont">I take lots of<br/>photos and video.</div>
+	</div>
+
+ 	<div class="panel7" id="panel7" onmouseover="mouseoverPanel7()" onmouseout="mouseoutPanel7()" onclick="panel7MoveOut(); panel9Show(); panel10Show();">
+		<div class="panel7-content _62-b" id="pan7-cont">I’m only looking to<br/>get the essentials.</div>
+	</div>
+	<div class="panel8" id="panel8" onmouseover="mouseoverPanel8()" onmouseout="mouseoutPanel8()">
+		<div class="panel8-content _62-b" id="pan8-cont">I‘m excited to have<br/>the latest features.</div>
+	</div>
+
+	<div class="panel9" id="panel9">
+		<div class="panel9-contents"><!--This allows overflow y scroll-->
+
+				<div class="_62-b color-shift__shade400">We think you’ll like<br/><span class="color-shift__black">iPhone 12.</span></div>
+				<br/>
+				<br/>
+				<br/>
+				<br/>
+				<br/>
+				<div class="_28-b color-shift__shade400">Here's Why</div>
+				<br/>
+				<br/>
+				<div class="_28-b">Get all of the latest technology<br/>at an affordable price.</div>
+				<br/>
+				<br/>
+				<div class="_28-b">Including a large 6.1”<br/>Liquid Retina Display.</div>
+				<br/>
+				<br/>
+				<div class="_28-b">And a breakthrough<br/>dual-camera system.</div>
+				<br/>
+				<br/>
+				<div class="card-signin">
+					<div class="signin-swap1" id="signin-swap1">
+						<div class="card-help-icon"><img src="img/ui-quiz-phones.png"></div>
+						<div class="card-subtitle _34-b">Compare iPhone 12’s features and price to your phone.</div>
+						<div class="button-signin _19-sb"> Sign in with Apple</div>
+						<a class="link-main _17-sb" style="margin-top: 6px; display: block;">Choose From A List of Phones </a>
+					</div>
+					<div class="signin-swap2" id="signin-swap2" style="display:none;">
+						<div class="card-signin-prompt _28-b">Choose which phone to compare.</div>
+						<label id="scrolltocompare" class="checkmark-wrapper" onclick="quizCompare();">
+							<input type="radio" name="radio"> <!--checked="checked"-->
+							<span class="checkmark"></span>
+							<div class="checkmark-image">
+								<img src="img/photos/quiz-prompt1.png">
+							</div>
+							<div class="checkmark-content">
+								<p class="_23-b">Your iPhone 8</p>
+								<p class="_17-reg">Get up to $140 in trade-in value</p>
+							</div>
+							</input>
+						</label>
+						<label class="checkmark-wrapper">
+							<input type="radio" name="radio">
+							<span class="checkmark"></span>
+							<div class="checkmark-image">
+								<img src="img/photos/quiz-prompt2.png">
+							</div>
+							<div class="checkmark-content">
+								<p class="_23-b">Sam's iPhone 7</p>
+								<p class="_17-reg">Get up to $100 in trade-in value</p>
+							</div>
+							</input>
+						</label>
+					</div>
+  				</div>
+  				<div class="quiz-compare-wrapper" id="quiz-compare-wrapper">
+					<div class="quiz-compare-section-header _40-b">Here’s how iPhone 12 compares to your iPhone 8.</div>
+					<div class="card-full">
+						<div class="card-context _17-b color-shift__shade400">Camera</div>
+						<div class="card-subtitle _23-b color-shift__white">Get an unprecedented level of detail with the Wide and Ultra Wide cameras. And capture incredible low-light shots with Night mode.</div>
+						<div class="button-plus">
+							<img src="img/ui-plus-white.svg">
+						</div>
+						<div class="card-asset-container card95">
+						</div>
+					</div>
+					<div style="height: 289px;">
+						<div class="card-halfy card-halfy-left">
+						<div class="card-context _17-b color-shift__shade400">Battery Life</div>
+						<div class="card-subtitle _19-b color-shift__white">Watch 4 more<br/>hours of video.</div>
+						<div class="button-plus">
+							<img src="img/ui-plus-white.svg">
+						</div>
+						<div class="card-asset-container card96"></div>
+						</div>
+						<div class="card-halfy card-halfy-right">
+							<div class="card-context _17-b color-shift__shade400">Security</div>
+							<div class="card-subtitle _19-b">Face ID is easier to use and 20 times more secure than Touch ID.</div>
+							<div class="button-plus button-plus__black">
+								<img src="img/ui-plus.svg">
+							</div>
+							<div class="card-asset-container card97"></div>
+						</div>
+					</div>
+ 					<div class="card-full card-full-shorty">
+ 						<div class="card-context _17-b color-shift__shade400">Data Speed</div>
+ 						<div class="card-subtitle _19-b" style="margin-top: 100px;">Download a movie in<br/>mere seconds with 5G.</div>
+ 						<div class="button-plus button-plus__black">
+ 							<img src="img/ui-plus.svg">
+ 						</div>
+ 						<div class="card-asset-container card98">
+ 						</div>
+ 					</div>
+					 <div class="card-full card-full-shorty">
+ 						<div class="card-context _17-b color-shift__shade400">Display</div>
+ 						<div class="card-subtitle _19-b color-shift__white">The edge-to-edge display gives you more room to watch your favorite shows.</div>
+ 						<div class="button-plus">
+ 							<img src="img/ui-plus-white.svg">
+ 						</div>
+ 						<div class="card-asset-container card99">
+ 						</div>
+ 					</div>
+				</div>
+
+					 <div class="quiz-compare-section-header _40-b">Save on your iPhone 12<br/>when you shop at Apple.</div>
+					<div class="card-full">
+						<div class="card-context _10-sb-all-caps color-shift__shade400">latest carrier offers</div>
+						<div class="card-subtitle _23-b">Save up to $700 when you buy and connect<br/>to your carrier directly from Apple.</div>
+						<div class="button-plus">
+							<img src="img/ui-plus-white.svg">
+						</div>
+						<div class="card-asset-container card100">
+						</div>
+					</div>
+					<div style="height: 289px;">
+						<div class="card-halfy card-halfy-left">
+						<div class="card-context _10-sb-all-caps color-shift__white">only at apple</div>
+						<div class="card-subtitle _17-sb color-shift__white">Get 3% Daily Cash back<br/>with Apple Card.</div>
+						<div class="button-plus">
+							<img src="img/ui-plus-white.svg">
+						</div>
+						<div class="card-asset-container card101"></div>
+						</div>
+						<div class="card-halfy card-halfy-right">
+							<div class="card-context _10-sb-all-caps">apple trade-in</div>
+							<div class="card-subtitle _17-sb">Get credit toward a new iPhone when you trade in.</div>
+							<div class="button-plus button-plus__black">
+								<img src="img/ui-plus.svg">
+							</div>
+							<div class="card-asset-container card102"></div>
+						</div>
+					</div>
+
+					<div class="quiz-compare-section-header _40-b">Other options<br/>to consider.</div>
+					<div class="card-full">
+						<div class="card-context _10-sb-all-caps color-shift__shade400">New</div>
+						<div class="card-subtitle _34-b color-shift__white">iPhone 12 Pro</div>
+						<div class="card-subtitle _19-b color-shift__white">Our best display available in two sizes<br/>— with an improved camera system.</div>
+						<div class="card-closer-text _12-reg color-shift__white">From $41.62/mo. or $999 before trade‑in<br/>Delivers in 1 week.</div>
+						<div class="card-asset-container card103">
+						</div>
+					</div>
+					<div class="card-full">
+						<div class="card-subtitle _34-b">iPhone 11</div>
+						<div class="card-subtitle _19-b">An edge-to-edge display with Face ID<br/>— at a more affordable price.</div>
+						<div class="card-closer-text _12-reg">From $24.95/mo. or $599 before trade-in<br/>Delivers in 1 week.</div>
+						<div class="card-asset-container card104">
+						</div>
+					</div>
+					<div class="quiz-compare-link">
+					<a class="link-main _14-sb">Compare All iPhone Models</a>
+					</div>
+
+					<div class="quiz-compare-section-header _40-b">More ways to help you<br/>find the right iPhone.</div>
+					<div style="height: 289px;">
+						<div class="card-halfy card-halfy-left card-halfy-tool">
+							<div class="card-help-icon"><img src="img/ui-help-calculator.svg"></div>
+							<div class="card-context _19-sb color-shift__shade400">Price Calculator</div>
+							<div class="card-subtitle _23-b">Find your iPhone at the best price.</div>
+						</div>
+						<div class="card-halfy card-halfy-right card-halfy-tool">
+							<div class="card-help-icon"><img src="img/ui-help-availability.svg"></div>
+							<div class="card-context _19-sb color-shift__shade400">iPhone Availability</div>
+							<div class="card-subtitle _23-b">Find the fastest way to get your iPhone.</div>
+						</div>
+					</div>
+					<div class="chatbar-wrapper chatbar-wrapper__quiz">
+						<div class="chatbar-center-content">
+							<div class="chatbar-image__human"><img src="img/flourish-human.png"></div>
+							<div class="chatbar-text-wrapper">
+								<!--<div class="_10-sb-all-caps">Vince From Apple</div>-->
+								<div class="_23-b">Hi, can I answer any questions<br/>about iPhone?</div>
+							</div>
+							<div class="button-main _14-sb">Chat Now</div>
+						</div>
+					</div>
+
+				<!--<div class="quiz-column-spacerfix"></div>-->
+
+		</div>
+	</div>
+
+	<div class="panel10" id="panel10">
+				<div class="panel10-contents">
+					<div class="quiz-outcome-image">
+						<img src="img/photos/quiz-iphone12.png">
+					</div>
+					<div class="product-interactions-wrapper">
+	<!--<a href="iphone-12.html#galleryTop">-->
+	<div class="product-interaction" onclick="galleryLaunch();"> <!--jumpGalTop();-->
+		<img class="product-interaction-icon" src="img/icon-interaction-gallery.svg"/>
+	</div>
+
+	<div class="product-interaction">
+		<img class="product-interaction-icon" src="img/icon-interaction-ar.svg"/>
+	</div>
+	<div class="product-interaction">
+		<img class="product-interaction-icon" src="img/icon-interaction-chat.svg"/>
+	</div>
+</div>
+					<div class="separator"></div>
+					<div class="pdp-price-lockup__non-pdp">
+						<div class="pdp-price-lockup-left">
+							<h3 class="_23-b">iPhone 12</h3>
+							<h4 class="_17-reg" style="margin-top: 3px;">From $29.12/mo. or $699 before trade‑in.</h4>
+						</div>
+						<div class="pdp-price-lockup-right" onclick="buyLaunch();">
+							<div class="button-main button-main__big _19-sb">Buy</div>
+						</div>
+					</div>
+					<a class="link-main _17-sb" style="margin-top: 6px; display: block;" href="iphone-12.html">See iPhone 12</a>
+				</div>
+			</div>
+
+
+</div>

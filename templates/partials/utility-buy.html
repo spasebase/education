@@ -1,0 +1,254 @@
+<div id="buy-wrapper">
+	<div class="close-section" id="buy-close">
+		<div class="button-close" id="button-close-quiz" onclick="buyClose();" style="background: rgba(0, 0, 0, 0.3);"> <!--matClose();-->
+			<img src="img/ui-close.svg"/>
+		</div>
+	</div>
+
+	<div class="device-panel" id="device-panel">
+		<div class="device-panel-content _114-b" id="device-pan-cont">
+			<div class="device-image-stack">
+				<img class="device-image-asset" id="12bl" src="img/photos/12-black.png">
+				<img class="device-image-asset" id="12w" src="img/photos/12-white.png">
+				<img class="device-image-asset" id="12b" src="img/photos/12-blue.png">
+				<img class="device-image-asset" id="12r" src="img/photos/12-red.png">
+				<img class="device-image-asset" id="12g" src="img/photos/12-green.png">
+			</div>
+			<div class="product-interactions-wrapper">
+	<!--<a href="iphone-12.html#galleryTop">-->
+	<div class="product-interaction" onclick="galleryLaunch();"> <!--jumpGalTop();-->
+		<img class="product-interaction-icon" src="img/icon-interaction-gallery.svg"/>
+	</div>
+
+	<div class="product-interaction">
+		<img class="product-interaction-icon" src="img/icon-interaction-ar.svg"/>
+	</div>
+	<div class="product-interaction">
+		<img class="product-interaction-icon" src="img/icon-interaction-chat.svg"/>
+	</div>
+</div>
+			<a class="link-main _17-sb" style="margin-top: 6px; display: block;">See iPhone 12</a>
+		</div>
+	</div>
+	<div class="config-panel" id="config-panel">
+		<div class="config-panel-content" id="config-pan-cont">
+			<div class="_40-b">Buy iPhone 12</div>
+			<div class="_19-sb" style="margin: 4px 0 0 1px;">$35.37/mo. or $849 before trade-in.</div>
+			<div class="_12-reg" style="margin: 4px 0 0 2px;">Delivers tomorrow or pick up today at Apple Palo Alto.</div>
+
+			<div class="choice-wrapper">
+				<div class="choice-question _34-b">First, choose a finish.</div>
+				<label id="scrolltocompare" class="colorpick-wrapper" onclick="colorChangeGreen()">
+					<input type="radio" checked="checked" name="color" value="green" id="green"> <!--checked="checked"-->
+					<span class="colorpick" style="background-color: #DBF2D9;"></span>
+					<div class="colorpick-content">
+						<div class="_14-sb">Green</div>
+					</div>
+					</input>
+				</label>
+				<label class="colorpick-wrapper" onclick="colorChangeRed()">
+					<input type="radio" name="color" value="red" id="red">
+					<span class="colorpick" style="background-color: #DC403F;"></span>
+					<div class="colorpick-content">
+						<div class="_14-sb">Red</div>
+					</div>
+					</input>
+				</label>
+				<label class="colorpick-wrapper" onclick="colorChangeBlue()">
+					<input type="radio" name="color" value="blue" id="blue">
+					<span class="colorpick" style="background-color: #154A6E;"></span>
+					<div class="colorpick-content">
+						<div class="_14-sb">Blue</div>
+					</div>
+					</input>
+				</label>
+				<label class="colorpick-wrapper" onclick="colorChangeWhite()">
+					<input type="radio" name="color" value="white" id="white">
+					<span class="colorpick" style="background-color: #F5F4F0;"></span>
+					<div class="colorpick-content">
+						<div class="_14-sb">White</div>
+					</div>
+					</input>
+				</label>
+				<label class="colorpick-wrapper" onclick="colorChangeBlack()">
+					<input type="radio" name="color" value="black" id="black">
+					<span class="colorpick" style="background-color: #36323C;"></span>
+					<div class="colorpick-content" style="margin-left: 2px;">
+						<div class="_14-sb">Black</div>
+					</div>
+					</input>
+				</label>
+			</div>
+
+			<div class="choice-wrapper">
+				<div class="choice-question _34-b">Next, select your options.</div>
+				<div class="segment-control-2up">
+					<input type="radio" name="buy-reco" value="reco" id="reco" />
+					<label for="reco" onclick="recoShow();">
+						<p class="_14-sb">Recommended</p>
+					</label>
+					<input type="radio" name="buy-reco" value="manual" id="manual" checked/>
+					<label for="manual" onclick="manuShow();">
+						<p class="_14-sb">Select Your Own</p>
+					</label>
+				</div>
+				<div class="reco-wrapper-ops" id="reco-ops" style="display: none;">
+					<div class="completed-wrapper">
+						<div class="completed-content">
+							<p class="_23-b">iPhone 12</p>
+							<p class="_12-reg color-shift__shade500">Based on your choice.</p>
+							<a class="link-main _14-sb">Change</a>
+						</div>
+					</div>
+					<div class="completed-wrapper">
+						<div class="completed-content">
+							<p class="_23-b">128GB</p>
+							<p class="_12-reg color-shift__shade500">Based on your choice.</p>
+							<a class="link-main _14-sb">Change</a>
+						</div>
+					</div>
+					<div class="completed-wrapper">
+						<div class="completed-content">
+							<p class="_23-b">AT&amp;T</p>
+							<p class="_12-reg color-shift__shade500">Your current carrier.</p>
+							<a class="link-main _14-sb">Change</a>
+						</div>
+					</div>
+					<div class="completed-wrapper">
+						<div class="completed-content">
+							<p class="_23-b">AppleCare+</p>
+							<p class="_12-reg color-shift__shade500">Based on your current device.</p>
+							<a class="link-main _14-sb">Change</a>
+						</div>
+					</div>
+				</div>
+				<div class="manual-wrapper-ops" id="manual-ops">
+					<label class="checkmark-wrapper checkmark-wrapper-main ">
+						<input type="radio" name="radio"> <!--checked="checked"-->
+						<span class="checkmark"></span>
+						<div class="checkmark-content">
+							<p class="_23-b">64GB</p>
+							<p class="_14-reg">From $699 or $29.12/mo. before trade-in</p>
+						</div>
+						</input>
+					</label>
+					<label class="checkmark-wrapper checkmark-wrapper-main ">
+						<input type="radio" name="radio">
+						<span class="checkmark"></span>
+						<div class="checkmark-content">
+							<p class="_23-b">128GB</p>
+							<p class="_14-reg">From $749 or $31.20/mo. before trade-in</p>
+						</div>
+						</input>
+					</label>
+					<label class="checkmark-wrapper checkmark-wrapper-main ">
+						<input type="radio" name="radio">
+						<span class="checkmark"></span>
+						<div class="checkmark-content">
+							<p class="_23-b">256GB</p>
+							<p class="_14-reg">From $849 or $35.37/mo. before trade-in</p>
+						</div>
+						</input>
+					</label>
+					<div class="choice-wrapper">
+						<div class="choice-question _34-b">Choose your carrier.</div>
+						<label class="checkmark-wrapper checkmark-wrapper__2up checkmark-wrapper__carrier">
+							<input type="radio" name="carrier"> <!--checked="checked"-->
+							<span class="checkmark"></span>
+							<div class="checkmark-content">
+								<!--<p class="_17-b">Pay Monthly</p>-->
+								<img src="img/logo-att.png">
+								<p class="pay-choice-subtext _14-reg">From $699 or $29.12/mo. before trade-in</p>
+							</div>
+							</input>
+						</label>
+						<label class="checkmark-wrapper checkmark-wrapper__2up checkmark-wrapper__carrier">
+							<input type="radio" name="carrier">
+							<span class="checkmark"></span>
+							<div class="checkmark-content">
+								<!--<p class="_17-b">Pay In Full</p>-->
+								<img src="img/logo-sprint.png">
+								<p class="pay-choice-subtext _14-reg">From $699 or $29.12/mo. before trade-in</p>
+							</div>
+							</input>
+						</label>
+						<label class="checkmark-wrapper checkmark-wrapper__2up checkmark-wrapper__carrier">
+							<input type="radio" name="carrier"> <!--checked="checked"-->
+							<span class="checkmark"></span>
+							<div class="checkmark-content">
+								<!--<p class="_17-b">Pay Monthly</p>-->
+								<img src="img/logo-tmobile.png" style="margin: 8px 0;">
+								<p class="pay-choice-subtext _14-reg">From $699 or $29.12/mo. before trade-in</p>
+							</div>
+							</input>
+						</label>
+						<label class="checkmark-wrapper checkmark-wrapper__2up checkmark-wrapper__carrier">
+							<input type="radio" name="carrier">
+							<span class="checkmark"></span>
+							<div class="checkmark-content">
+								<!--<p class="_17-b">Pay In Full</p>-->
+								<img src="img/logo-verizon.png" style="margin: 8px 0;">
+								<p class="pay-choice-subtext _14-reg">From $699 or $29.12/mo. before trade-in</p>
+							</div>
+							</input>
+						</label>
+						<br/>
+						<label class="checkmark-wrapper checkmark-wrapper-main ">
+						<input type="radio" name="carrier">
+						<span class="checkmark"></span>
+						<div class="checkmark-content" style="text-align: center;">
+							<p class="_17-b" style="margin-bottom: 4px; margin-top: 3px;">Sim-free - activate with any carrier.</p>
+							<p class="_14-reg">From $729 or $30.37/mo. before trade-in</p>
+						</div>
+						</input>
+					</label>
+						<div class="clearfix"></div>
+					</div>
+				</div>
+			</div>
+
+			<div class="choice-wrapper">
+				<div class="choice-question _34-b">Now pick how to pay.</div>
+				<label class="checkmark-wrapper checkmark-wrapper__2up">
+					<input type="radio" name="radio3"> <!--checked="checked"-->
+					<span class="checkmark"></span>
+					<div class="checkmark-content">
+						<p class="_17-b">Pay Monthly</p>
+						<p class="pay-choice-subtext _14-reg">$35.37 for 24 months before trade-in.</p>
+					</div>
+					</input>
+				</label>
+				<label class="checkmark-wrapper checkmark-wrapper__2up">
+					<input type="radio" name="radio3">
+					<span class="checkmark"></span>
+					<div class="checkmark-content">
+						<p class="_17-b">Pay In Full</p>
+						<p class="pay-choice-subtext _14-reg">$849.00 before<br/>trade-in.</p>
+					</div>
+					</input>
+				</label>
+				<div class="clearfix"></div>
+			</div>
+
+			<div class="config-review-wrapper">
+				<div class="_34-b">$35.37 for 24 months<br/>before your trade-in.</div>
+				<div class="_17-reg" style="margin-top: 20px; margin-bottom: 6px;"><span class="_17-b">Pick up</span> today at <a class="link-main">Apple Palo Alto.</a></div>
+				<div class="_17-reg"><span class="_17-b">Delivers</span> free tomorrow (<a class="link-main">30067</a>)</div>
+				<div class="button-buy _17-sb">Add To Bag</div>
+			</div>
+
+			<!--Vince Chatbar-->
+			<div class="chatbar-wrapper chatbar-wrapper__quiz">
+				<div class="chatbar-center-content">
+					<div class="chatbar-image__human"><img src="img/flourish-human.png"></div>
+					<div class="chatbar-text-wrapper">
+						<!--<div class="_10-sb-all-caps">Vince From Apple</div>-->
+						<div class="_23-b">Hi, can I answer any questions<br/>about iPhone?</div>
+					</div>
+					<div class="button-main _14-sb">Chat Now</div>
+				</div>
+			</div>
+
+		</div>
+	</div>
+</div>

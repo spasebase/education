@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US" dir="ltr" prefix="og: http://ogp.me/ns#" class="no-js">
+	<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+	<meta name="msapplication-TileColor" content="#000000">
+	<meta name="theme-color" content="#ffffff">
+
+	<title>Aqueduct</title>
+
+	<link rel="stylesheet" href="https://www.apple.com/wss/fonts?families=SF+Pro,v1|SF+Pro+Icons,v1">
+	<link rel="stylesheet" href="styles/main.built.css" type="text/css">
+	<link rel="stylesheet" href="styles/xds-main.built.css" type="text/css">
+
+	<script src="scripts/head.built.js" type="text/javascript" charset="utf-8"></script>
+
+	<link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
+	<link rel="manifest" href="img/site.webmanifest">
+	<link rel="mask-icon" href="img/safari-pinned-tab.svg" color="#ebbb3d">
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+	<!-- This has been included from partials/head.nunjucks -->
+</head>
+
+	<body class="hide-scrollbars overflow-x-wrapper">
+
+		<!-- You write code for this content block in another file over THERE -->
+		 
+
+	<!--<script src="https://code.jquery.com/jquery-latest.js"></script>-->
+	<script type="text/javascript" src="scripts/jquery.js" charset="utf-8"></script>
+	<script type="text/javascript" src="scripts/main.built.js" charset="utf-8"></script>
+	<script type="text/javascript" src="scripts/image-sequencer.js" charset="utf-8"></script>
+	<script type="text/javascript" src="scripts/wow.js" charset="utf-8"></script>
+	<script type="text/javascript" src="scripts/gallery.js"></script>
+
+		<!--Initialize Sequencer Images-->
+		<script type="text/javascript">
+			$("div#images").sequencer({
+			  count: 141,
+			  path: "img/iphone-12",
+			  ext: "png"
+			}, function() {
+			  $("div#preload").fadeOut(1000); //.hide();
+			});
+		</script>
+
+
+		<!--Fade Price out/in at certain scroll depth-->
+		<script type="text/javascript">
+			$(document).scroll(function () {
+			var y = $(this).scrollTop();
+			if (y > 1) {
+				$('.pdp-price-lockup').css("opacity", "0");
+			} else {
+				$('.pdp-price-lockup').css("opacity", "1");
+			}
+		});
+		</script>
+
+
+		<!--Move SUB in at certain scroll depth-->
+		<script type="text/javascript">
+			$(document).scroll(function () {
+			var y = $(this).scrollTop();
+			if (y > 200) {
+				$('.sub-wrapper').css("bottom", "30px");
+			} else {
+				$('.sub-wrapper').css("bottom", "-80px");
+			}
+		});
+		</script>
+
+		<!--Scale Product Title Down on Scroll-->
+		<script type="text/javascript">
+			$(window).on('scroll',function(){
+			$('.product-title-pdp').css('font-size',(($(this).scrollTop()*-.085)+160)+'px');
+		});
+		</script>
+
+		<!--Move PDP Hi on Scroll-->
+		<script type="text/javascript">
+			$(window).on('scroll',function(){
+			$('.pdp-hi').css('margin-top',(($(this).scrollTop()*.065)-140)+'px');
+		});
+		</script>
+
+		<!--Fade PDP Hi at certain scroll depth-->
+		<script type="text/javascript">
+			$(document).scroll(function () {
+			var y = $(this).scrollTop();
+			if (y > 750) {
+				$('.pdp-hi').css("opacity", "1");
+			} else {
+				$('.pdp-hi').css("opacity", "0");
+			}
+		});
+		</script>
+
+		<!--Animate and Reveal at Thresholds-->
+		<script type="text/javascript">
+			var wow = new WOW(
+			{
+				boxClass:     'wow',      // animated element css class (default is wow)
+				animateClass: 'animated', // animation css class (default is animated)
+				offset:       0,          // distance to the element when triggering the animation (default is 0)
+				mobile:       true,       // trigger animations on mobile devices (default is true)
+				live:         true,       // act on asynchronously loaded content (default is true)
+				callback:     function(box) {
+				// the callback is fired every time an animation is started
+				// the argument that is passed in is the DOM node being animated
+				},
+				scrollContainer: null,    // optional scroll container selector, otherwise use window,
+				resetAnimation: true,     // reset animation on end (default is true)
+			}
+			);
+			wow.init();
+		</script>
+
+		<!--Expand to Fullscreen Init-->
+		<script>
+		$('.section').click(function(){
+			$('html, body').animate({
+				scrollTop: $( $(this).attr('href') ).offset().top
+			}, 500);
+			return false;
+		});
+		</script>
+
+		<!--Break out Of Grid on Click/Expand Div/Sections
+		<script type="text/javascript">
+		function gridBreak() {
+		var element = document.getElementById("gridded");
+		element.classList.add("gridbreak");
+
+		var element = document.getElementById("gridded-item");
+		element.classList.add("gridded-item-break");
+
+		var element = document.getElementById("gridded-item2");
+		element.classList.add("gridded-item-break");
+		}
+		</script>-->
+
+		<!--Remove Class gridbreak
+		<script type="text/javascript">
+		function gridReturn() {
+		var element = document.getElementById("gridded");
+		element.classList.remove("gridbreak");
+
+		var element = document.getElementById("gridded-item");
+		element.classList.remove("gridded-item-break");
+
+		var element = document.getElementById("gridded-item2");
+		element.classList.remove("gridded-item-break");
+		}
+		</script>-->
+
+
+		<!--Quick Remove Element-->
+		<script type="text/javascript">
+		function quickRemove() {
+
+		var element = document.getElementById("quick-remove");
+		element.classList.add("quick-remove");
+
+		var element = document.getElementById("quick-add");
+		element.classList.remove("quick-add");
+		}
+		</script>
+
+		<!--Quick Add Element-->
+		<script type="text/javascript">
+		function quickAdd() {
+
+		var element = document.getElementById("quick-add");
+		element.classList.add("quick-add");
+
+		var element = document.getElementById("quick-remove");
+		element.classList.remove("quick-remove");
+		}
+		</script>
+
+		<!--Quick Remove Element-->
+		<script type="text/javascript">
+		function quickRemove2() {
+
+		var element = document.getElementById("quick-remove2");
+		element.classList.add("quick-remove");
+
+		var element = document.getElementById("quick-add2");
+		element.classList.remove("quick-add");
+		}
+		</script>
+
+		<!--Quick Add Element-->
+		<script type="text/javascript">
+		function quickAdd2() {
+
+		var element = document.getElementById("quick-add2");
+		element.classList.add("quick-add");
+
+		var element = document.getElementById("quick-remove2");
+		element.classList.remove("quick-remove");
+		}
+		</script>
+
+		<!--Quick Remove Element-->
+		<script type="text/javascript">
+		function quickRemove3() {
+
+		var element = document.getElementById("quick-remove3");
+		element.classList.add("quick-remove");
+
+		var element = document.getElementById("quick-add3");
+		element.classList.remove("quick-add");
+		}
+		</script>
+
+		<!--Quick Add Element-->
+		<script type="text/javascript">
+		function quickAdd3() {
+
+		var element = document.getElementById("quick-add3");
+		element.classList.add("quick-add");
+
+		var element = document.getElementById("quick-remove3");
+		element.classList.remove("quick-remove");
+		}
+		</script>
+
+		<!--Quick Remove Element-->
+		<script type="text/javascript">
+		function quickRemove4() {
+
+		var element = document.getElementById("quick-remove4");
+		element.classList.add("quick-remove");
+
+		var element = document.getElementById("quick-add4");
+		element.classList.remove("quick-add");
+		}
+		</script>
+
+		<!--Quick Add Element-->
+		<script type="text/javascript">
+		function quickAdd4() {
+
+		var element = document.getElementById("quick-add4");
+		element.classList.add("quick-add");
+
+		var element = document.getElementById("quick-remove4");
+		element.classList.remove("quick-remove");
+		}
+		</script>
+
+		<!--Quick Remove Element-->
+		<script type="text/javascript">
+		function quickRemove5() {
+
+		var element = document.getElementById("quick-remove5");
+		element.classList.add("quick-remove");
+
+		var element = document.getElementById("quick-add5");
+		element.classList.remove("quick-add");
+		}
+		</script>
+
+		<!--Quick Add Element-->
+		<script type="text/javascript">
+		function quickAdd5() {
+
+		var element = document.getElementById("quick-add5");
+		element.classList.add("quick-add");
+
+		var element = document.getElementById("quick-remove5");
+		element.classList.remove("quick-remove");
+		}
+		</script>
+
+		<!--Quick Remove Element-->
+		<script type="text/javascript">
+		function quickRemove6() {
+
+		var element = document.getElementById("quick-remove6");
+		element.classList.add("quick-remove");
+
+		var element = document.getElementById("quick-add6");
+		element.classList.remove("quick-add");
+		}
+		</script>
+
+		<!--Quick Add Element-->
+		<script type="text/javascript">
+		function quickAdd6() {
+
+		var element = document.getElementById("quick-add6");
+		element.classList.add("quick-add");
+
+		var element = document.getElementById("quick-remove6");
+		element.classList.remove("quick-remove");
+		}
+		</script>
+
+		<!--Quick Remove Element-->
+		<script type="text/javascript">
+		function quickRemove7() {
+
+		var element = document.getElementById("quick-remove7");
+		element.classList.add("quick-remove");
+
+		var element = document.getElementById("quick-add7");
+		element.classList.remove("quick-add");
+		}
+		</script>
+
+		<!--Quick Add Element-->
+		<script type="text/javascript">
+		function quickAdd7() {
+
+		var element = document.getElementById("quick-add7");
+		element.classList.add("quick-add");
+
+		var element = document.getElementById("quick-remove7");
+		element.classList.remove("quick-remove");
+		}
+		</script>
+
+		<!--Quick Remove Element-->
+		<script type="text/javascript">
+		function quickRemove8() {
+
+		var element = document.getElementById("quick-remove8");
+		element.classList.add("quick-remove");
+
+		var element = document.getElementById("quick-add8");
+		element.classList.remove("quick-add");
+		}
+		</script>
+
+		<!--Quick Add Element-->
+		<script type="text/javascript">
+		function quickAdd8() {
+
+		var element = document.getElementById("quick-add8");
+		element.classList.add("quick-add");
+
+		var element = document.getElementById("quick-remove8");
+		element.classList.remove("quick-remove");
+		}
+		</script>
+
+	</body>
+</html>

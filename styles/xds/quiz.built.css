@@ -1,0 +1,507 @@
+#quiz-wrapper {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  margin-left: 100vw;
+  overflow: hidden;
+  top: 0;
+  z-index: 15;
+  -webkit-transition-duration: 500ms;
+  transition-duration: 500ms;
+  -webkit-transition-timing-function: cubic-bezier(0.4, 0.2, 0, 1);
+  transition-timing-function: cubic-bezier(0.4, 0.2, 0, 1); }
+
+#quiz-wrapper .close-section {
+  opacity: 1;
+  pointer-events: auto;
+  position: absolute; }
+
+#quiz-wrapper .button-close {
+  cursor: pointer; }
+
+.is-launched {
+  margin-left: 0px; }
+
+#quiz-wrapper.is-launched {
+  margin-left: 0px; }
+
+.panel1 {
+  width: 100vw;
+  height: 100%;
+  position: absolute;
+  z-index: 11;
+  top: 0;
+  left: 0;
+  padding-right: 2vw;
+  background: white;
+  -webkit-transition-delay: 400ms, 0s;
+  transition-delay: 400ms, 0s;
+  -webkit-transition-duration: 500ms, 200ms;
+  transition-duration: 500ms, 200ms;
+  -webkit-transition-timing-function: cubic-bezier(0.4, 0.2, 0, 1);
+  transition-timing-function: cubic-bezier(0.4, 0.2, 0, 1);
+  -webkit-transition-property: width, padding;
+  transition-property: width, padding; }
+
+#quiz-wrapper.is-launched .panel1 {
+  width: 48vw; }
+
+.panel2 {
+  width: calc(50vw + 2px);
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: black;
+  cursor: url("../img/ui-quiz.svg"), pointer;
+  padding-left: 0vw;
+  -webkit-transition-duration: 200ms, 250ms;
+  transition-duration: 200ms, 250ms;
+  -webkit-transition-timing-function: cubic-bezier(0.4, 0.2, 0, 1);
+  transition-timing-function: cubic-bezier(0.4, 0.2, 0, 1);
+  -webkit-transition-property: padding, width;
+  transition-property: padding, width; }
+
+#quiz-wrapper.is-launched .panel2:hover {
+  padding-left: 2vw; }
+
+.is-moved {
+  width: 100vw;
+  z-index: 12;
+  cursor: auto; }
+
+.panel3 {
+  width: 100vw;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  z-index: 13;
+  left: 100vw;
+  padding-right: 2vw;
+  background: #AECBD9;
+  cursor: url("../img/ui-quiz-left.svg"), pointer;
+  padding-left: 0vw;
+  -webkit-transition-delay: 250ms, 650ms, 0s;
+  transition-delay: 250ms, 650ms, 0s;
+  -webkit-transition-duration: 500ms, 500ms, 200ms;
+  transition-duration: 500ms, 500ms, 200ms;
+  -webkit-transition-timing-function: cubic-bezier(0.4, 0.2, 0, 1);
+  transition-timing-function: cubic-bezier(0.4, 0.2, 0, 1);
+  -webkit-transition-property: left, width, padding;
+  transition-property: left, width, padding; }
+
+.panel3-in {
+  left: 0vw;
+  width: calc(48vw + 2px); }
+
+.panel3.panel3-in:hover {
+  padding-right: 4vw !important; }
+
+.panel4 {
+  width: calc(48vw + 2px);
+  height: 100%;
+  position: absolute;
+  top: 0;
+  z-index: 12;
+  right: calc(-50vw - 2px);
+  padding-left: 2vw;
+  background: black;
+  cursor: url("../img/ui-quiz.svg"), pointer;
+  padding-left: 2vw;
+  -webkit-transition-delay: 650ms, 0s, 0s;
+  transition-delay: 650ms, 0s, 0s;
+  -webkit-transition-duration: 250ms, 200ms, 250ms;
+  transition-duration: 250ms, 200ms, 250ms;
+  -webkit-transition-timing-function: cubic-bezier(0.4, 0.2, 0, 1);
+  transition-timing-function: cubic-bezier(0.4, 0.2, 0, 1);
+  -webkit-transition-property: right, padding, width;
+  transition-property: right, padding, width; }
+
+.panel4-in {
+  right: 0vw; }
+
+.panel4:hover {
+  padding-left: 4vw !important; }
+
+.is-moved2 {
+  width: 100vw;
+  z-index: 14;
+  cursor: auto; }
+
+.panel5 {
+  width: 100vw;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  z-index: 15;
+  left: 100vw;
+  overflow: hidden;
+  padding-right: 2vw;
+  background: white;
+  cursor: url("../img/ui-quiz-left-black.svg"), pointer;
+  padding-left: 0vw;
+  -webkit-transition-delay: 250ms, 650ms, 0s;
+  transition-delay: 250ms, 650ms, 0s;
+  -webkit-transition-duration: 500ms, 500ms, 200ms;
+  transition-duration: 500ms, 500ms, 200ms;
+  -webkit-transition-timing-function: cubic-bezier(0.4, 0.2, 0, 1);
+  transition-timing-function: cubic-bezier(0.4, 0.2, 0, 1);
+  -webkit-transition-property: left, width, padding;
+  transition-property: left, width, padding; }
+
+.panel5-in {
+  left: 0vw;
+  width: calc(48vw + 2px); }
+
+.panel5.panel5-in:hover {
+  padding-right: 4vw !important; }
+
+.panel6 {
+  width: calc(48vw + 2px);
+  height: 100%;
+  position: absolute;
+  top: 0;
+  z-index: 14;
+  right: calc(-50vw - 2px);
+  padding-left: 2vw;
+  background: #ECEADC;
+  cursor: url("../img/ui-quiz.svg"), pointer;
+  -webkit-transition-delay: 650ms, 0s, 0s;
+  transition-delay: 650ms, 0s, 0s;
+  -webkit-transition-duration: 250ms, 200ms, 250ms;
+  transition-duration: 250ms, 200ms, 250ms;
+  -webkit-transition-timing-function: cubic-bezier(0.4, 0.2, 0, 1);
+  transition-timing-function: cubic-bezier(0.4, 0.2, 0, 1);
+  -webkit-transition-property: right, padding, width;
+  transition-property: right, padding, width; }
+
+.panel6-in {
+  right: 0vw; }
+
+.panel6:hover {
+  padding-left: 4vw !important; }
+
+.is-moved3 {
+  width: 100vw;
+  z-index: 16;
+  cursor: auto;
+  padding-left: 0; }
+
+.panel7 {
+  width: 100vw;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  z-index: 19;
+  left: 100vw;
+  padding-right: 2vw;
+  overflow: hidden;
+  background: var(--shade100);
+  cursor: url("../img/ui-quiz-left-black.svg"), pointer;
+  padding-left: 0vw;
+  -webkit-transition-delay: 250ms, 650ms, 0s;
+  transition-delay: 250ms, 650ms, 0s;
+  -webkit-transition-duration: 500ms, 500ms, 200ms;
+  transition-duration: 500ms, 500ms, 200ms;
+  -webkit-transition-timing-function: cubic-bezier(0.4, 0.2, 0, 1);
+  transition-timing-function: cubic-bezier(0.4, 0.2, 0, 1);
+  -webkit-transition-property: left, width, padding;
+  transition-property: left, width, padding; }
+
+.panel7-in {
+  left: 0vw;
+  width: calc(48vw + 2px); }
+
+.panel7.panel7-in:hover {
+  padding-right: 4vw !important; }
+
+.panel7-out {
+  -webkit-transition-delay: 500ms, 0s;
+  transition-delay: 500ms, 0s;
+  -webkit-transition-duration: 500ms, 250ms;
+  transition-duration: 500ms, 250ms;
+  -webkit-transition-timing-function: cubic-bezier(0.4, 0.2, 0, 1);
+  transition-timing-function: cubic-bezier(0.4, 0.2, 0, 1);
+  -webkit-transition-property: left, width;
+  transition-property: left, width;
+  left: 100vw;
+  width: 100vw; }
+
+.panel8 {
+  width: calc(48vw + 2px);
+  height: 100%;
+  position: absolute;
+  top: 0;
+  z-index: 18;
+  right: calc(-50vw - 2px);
+  padding-left: 2vw;
+  background: #C0C6D0;
+  cursor: url("../img/ui-quiz.svg"), pointer;
+  padding-left: 2vw;
+  -webkit-transition-delay: 650ms, 0s;
+  transition-delay: 650ms, 0s;
+  -webkit-transition-duration: 250ms, 200ms;
+  transition-duration: 250ms, 200ms;
+  -webkit-transition-timing-function: cubic-bezier(0.4, 0.2, 0, 1);
+  transition-timing-function: cubic-bezier(0.4, 0.2, 0, 1);
+  -webkit-transition-property: right, padding;
+  transition-property: right, padding; }
+
+.panel8-in {
+  right: 0vw; }
+
+.panel8.panel8-in:hover {
+  padding-left: 4vw !important; }
+
+.panel9 {
+  position: absolute;
+  top: 0;
+  left: 0vw;
+  width: 50vw;
+  height: 100vh;
+  z-index: 18;
+  background: var(--shade150);
+  visibility: hidden;
+  -webkit-transition-delay: 0ms;
+  transition-delay: 0ms;
+  -webkit-transition-duration: 0ms;
+  transition-duration: 0ms;
+  -webkit-transition-timing-function: cubic-bezier(0.4, 0.2, 0, 1);
+  transition-timing-function: cubic-bezier(0.4, 0.2, 0, 1);
+  -webkit-transition-property: visibility;
+  transition-property: visibility; }
+
+.panel9-contents {
+  overflow-y: scroll;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  padding: 12%; }
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.panel9-contents::-webkit-scrollbar {
+  display: none; }
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.panel9-contents {
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */ }
+
+.panel10 {
+  position: absolute;
+  top: 0;
+  left: 50vw;
+  width: 50vw;
+  height: 100vh;
+  z-index: 18;
+  background: white;
+  visibility: hidden;
+  -webkit-transition-delay: 250ms;
+  transition-delay: 250ms;
+  -webkit-transition-duration: 0ms;
+  transition-duration: 0ms;
+  -webkit-transition-timing-function: cubic-bezier(0.4, 0.2, 0, 1);
+  transition-timing-function: cubic-bezier(0.4, 0.2, 0, 1);
+  -webkit-transition-property: visibility;
+  transition-property: visibility; }
+
+.panel10-contents {
+  position: relative;
+  width: 76.66%;
+  height: 100%;
+  margin: 0 auto;
+  padding-top: 8%; }
+
+.panel10-contents .product-interactions-wrapper {
+  margin-top: 0px;
+  height: 48px; }
+
+.panel9-show,
+.panel10-show {
+  visibility: visible; }
+
+.quiz-outcome-image {
+  padding: 3vh 4vw 3vh 4vw; }
+
+.quiz-outcome-image img {
+  height: 100%;
+  margin: 0 auto;
+  display: block;
+  width: 100%;
+  max-width: 360px; }
+
+.separator {
+  width: 100%;
+  height: 2px;
+  background: var(--shade150);
+  margin: 4vh 0 4vh 0; }
+
+.pdp-price-lockup__non-pdp .pdp-price-lockup-right {
+  float: right;
+  top: 0px; }
+
+.quiz-column-spacerfix {
+  width: 100%;
+  display: block;
+  height: 14vh;
+  position: relative; }
+
+.quiz-compare-section-header {
+  margin-bottom: 34px;
+  margin-top: 100px; }
+
+#quiz-compare-wrapper {
+  visibility: hidden;
+  display: none;
+  padding-top: 10px;
+  transition: visibility .2s ease-in-out; }
+
+.panel1-content {
+  width: 100%;
+  display: flex;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  opacity: 0;
+  transition: all 400ms ease-in-out;
+  transition-delay: 550ms; }
+
+#quiz-wrapper.is-launched .panel1-content {
+  opacity: 1; }
+
+.panel2-content {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: all 400ms ease-in-out;
+  transition-delay: 750ms; }
+
+#quiz-wrapper.is-launched .panel2-content {
+  opacity: 1; }
+
+.panel3-content {
+  height: calc(100% - 80px);
+  opacity: 0;
+  width: 90%;
+  margin-left: -4vw;
+  padding-top: 80px;
+  padding-left: 130px;
+  overflow: hidden;
+  transition: all 400ms ease-in-out;
+  transition-delay: 750ms;
+  background-image: url("../img/photos/quiz-panel3.png");
+  background-size: 389px 602px;
+  background-position: 50% 100%;
+  background-repeat: no-repeat; }
+
+#panel3.panel3-in .panel3-content {
+  opacity: 1; }
+
+.panel4-content {
+  height: calc(100% - 80px);
+  width: 110%;
+  margin-left: -4vw;
+  opacity: 0;
+  padding-top: 80px;
+  padding-left: 120px;
+  transition: all 400ms ease-in-out;
+  transition-delay: 750ms;
+  background-image: url("../img/photos/quiz-panel4.png");
+  background-size: 1026px 503px;
+  background-position: 60% 100%;
+  background-repeat: no-repeat; }
+
+#panel4.panel4-in .panel4-content {
+  opacity: 1; }
+
+#panel4.panel4-in.is-moved2 .panel4-content {
+  opacity: 0;
+  transition-delay: 200ms;
+  transition: all 350ms ease-in-out; }
+
+.panel5-content {
+  height: calc(100% - 80px);
+  opacity: 0;
+  width: 110%;
+  margin-left: -6vw;
+  padding-top: 80px;
+  padding-left: 130px;
+  overflow: hidden;
+  transition: all 400ms ease-in-out;
+  transition-delay: 750ms;
+  background-image: url("../img/photos/quiz-panel5.png");
+  background-size: 738px 554px;
+  background-position: 45% 100%;
+  background-repeat: no-repeat; }
+
+#panel5.panel5-in .panel5-content {
+  opacity: 1; }
+
+.panel6-content {
+  height: 100%;
+  width: 110%;
+  margin-left: -4vw;
+  opacity: 0;
+  padding-top: 80px;
+  padding-left: 120px;
+  transition: all 400ms ease-in-out;
+  transition-delay: 750ms;
+  background-image: url("../img/photos/quiz-panel6.png");
+  background-size: 1534px 849px;
+  background-position: bottom center;
+  background-repeat: no-repeat; }
+
+#panel6.panel6-in .panel6-content {
+  opacity: 1; }
+
+#panel6.panel6-in.is-moved3 .panel6-content {
+  padding-left: 0px;
+  opacity: 0;
+  transition-delay: 200ms;
+  transition: all 350ms ease-in-out; }
+
+.panel7-content {
+  height: 100%;
+  opacity: 0;
+  width: 110%;
+  margin-left: -4vw;
+  padding-top: 80px;
+  padding-left: 130px;
+  overflow: hidden;
+  transition: all 400ms ease-in-out;
+  transition-delay: 750ms;
+  background-image: url("../img/photos/quiz-panel7.png");
+  background-size: 539px 400px;
+  background-position: 40% 55%;
+  background-repeat: no-repeat; }
+
+#panel7.panel7-in .panel7-content {
+  opacity: 1; }
+
+#panel7.panel7-in.panel7-out .panel7-content {
+  opacity: 0;
+  transition-delay: 50ms;
+  transition: all 250ms ease-in-out; }
+
+.panel8-content {
+  height: 100%;
+  width: 110%;
+  margin-left: -4vw;
+  opacity: 0;
+  padding-top: 80px;
+  padding-left: 120px;
+  transition: all 400ms ease-in-out;
+  transition-delay: 750ms;
+  background-image: url("../img/photos/quiz-panel8.png");
+  background-size: cover;
+  background-position: top;
+  background-repeat: no-repeat; }
+
+#panel8.panel8-in .panel8-content {
+  opacity: 1; }

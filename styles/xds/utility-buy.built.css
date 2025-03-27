@@ -1,0 +1,131 @@
+#buy-wrapper {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  margin-left: 100vw;
+  overflow: hidden;
+  top: 0;
+  z-index: 16;
+  -webkit-transition-duration: 500ms;
+  transition-duration: 500ms;
+  -webkit-transition-timing-function: cubic-bezier(0.4, 0.2, 0, 1);
+  transition-timing-function: cubic-bezier(0.4, 0.2, 0, 1); }
+
+#buy-wrapper .button-close {
+  cursor: pointer; }
+
+.buy-intent {
+  margin-left: 0px; }
+
+#buy-wrapper.buy-intent {
+  margin-left: 0px; }
+
+.device-panel {
+  width: 100vw;
+  height: 100%;
+  position: absolute;
+  z-index: 11;
+  top: 0;
+  left: 0;
+  background: white;
+  -webkit-transition-delay: 400ms, 0s;
+  transition-delay: 400ms, 0s;
+  -webkit-transition-duration: 500ms, 200ms;
+  transition-duration: 500ms, 200ms;
+  -webkit-transition-timing-function: cubic-bezier(0.4, 0.2, 0, 1);
+  transition-timing-function: cubic-bezier(0.4, 0.2, 0, 1);
+  -webkit-transition-property: width, padding;
+  transition-property: width, padding; }
+
+#buy-wrapper.buy-intent .device-panel {
+  width: 65vw; }
+
+.config-panel {
+  width: 35vw;
+  min-width: 400px;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: var(--shade150);
+  padding-left: 0vw;
+  -webkit-transition-duration: 200ms, 250ms;
+  transition-duration: 200ms, 250ms;
+  -webkit-transition-timing-function: cubic-bezier(0.4, 0.2, 0, 1);
+  transition-timing-function: cubic-bezier(0.4, 0.2, 0, 1);
+  -webkit-transition-property: padding, width;
+  transition-property: padding, width; }
+
+.device-panel-content {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  opacity: 0;
+  padding: 2vw;
+  box-sizing: border-box;
+  transition: all 400ms ease-in-out;
+  transition-delay: 550ms; }
+
+#buy-wrapper.buy-intent .device-panel-content {
+  opacity: 1; }
+
+.config-panel-content {
+  overflow-y: scroll;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  padding: 12%;
+  opacity: 0;
+  transition: all 400ms ease-in-out;
+  transition-delay: 750ms; }
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.config-panel-content::-webkit-scrollbar {
+  display: none; }
+
+#buy-wrapper.buy-intent .config-panel-content {
+  opacity: 1; }
+
+.device-image-stack {
+  position: relative;
+  height: 670px; }
+
+.device-image-asset {
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  width: 530px;
+  transition: all .2s ease-in-out; }
+
+.device-image-asset:nth-child(5) {
+  opacity: 1; }
+
+.device-panel-content .product-interactions-wrapper {
+  margin-top: 10px;
+  height: 74px; }
+
+.device-panel-content a.link-main {
+  text-align: center; }
+
+.choice-question {
+  margin-bottom: 28px; }
+
+.choice-wrapper {
+  margin-top: 120px; }
+
+.config-review-wrapper {
+  margin: 120px 0 60px 0; }
+
+.pay-choice-subtext {
+  margin-top: 6px; }
+
+.buy-ops-swap-in {
+  opacity: 1;
+  display: block !important; }
+
+.buy-ops-swap-out {
+  display: none; }

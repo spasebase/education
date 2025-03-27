@@ -1,0 +1,105 @@
+.flickity-viewport {
+  overflow-x: scroll;
+  overflow-y: hidden;
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
+  padding-top: 16px;
+  margin-top: -16px;
+  padding-bottom: 4px;
+  margin-bottom: -4px; }
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.flickity-viewport::-webkit-scrollbar {
+  display: none; }
+
+.flickity-slider {
+  margin-left: calc(6% - 6px); }
+
+.carousel-featured {
+  margin-top: 32px; }
+
+@media only screen and (max-width: 663px) {
+  .carousel-featured {
+    margin-top: 22px; } }
+
+.carousel-digitalmat {
+  margin-top: 32px;
+  z-index: 12; }
+
+.clear-cell-fix {
+  width: 5%;
+  height: calc(100% + 20px); }
+
+.carousel-new-service-jumper .flickity-slider {
+  margin-left: 0px; }
+
+.carousel-new-service-jumper {
+  margin-top: -6px;
+  margin-bottom: 34px; }
+
+@media only screen and (max-width: 663px) {
+  .carousel-new-service-jumper {
+    margin-top: -10px;
+    margin-bottom: 24px; } }
+
+.carousel-cell {
+  width: 598px;
+  height: 540px;
+  margin-right: 20px;
+  background: var(--shade300);
+  border-radius: 20px;
+  counter-increment: gallery-cell;
+  background-size: contain; }
+
+.carousel-banner {
+  border-bottom: 1px solid var(--shade200);
+  height: 50px;
+  position: relative; }
+
+.carousel-banner .offer-wrapper {
+  margin-top: 15px; }
+
+.carousel-banner .flickity-slider {
+  margin-left: 0; }
+
+.carousel-banner .flickity-prev-next-button.next {
+  right: 8.9% !important; }
+
+.carousel-banner .flickity-prev-next-button.previous {
+  right: 12.1% !important;
+  left: auto; }
+
+.flickity-prev-next-button {
+  top: 50%;
+  width: 24px;
+  height: 24px; }
+
+.flickity-prev-next-button .flickity-button-icon {
+  left: 24%;
+  top: 24%;
+  width: 56%;
+  height: 56%; }
+
+.flickity-button {
+  background: rgba(255, 255, 255, 0); }
+
+.flickity-button-icon {
+  fill: var(--shade600); }
+
+.banner-close {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  padding: 5px 6px 6px 6px;
+  border-radius: 90px;
+  right: 5.8%;
+  top: 13px;
+  box-sizing: border-box;
+  background: white;
+  cursor: pointer; }
+
+.carousel-page-jumper {
+  margin-top: 40px;
+  margin-left: 8px; }

@@ -1,0 +1,151 @@
+div#preload {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  padding-top: 25%;
+  background: white;
+  z-index: 30; }
+
+div#preload h1, div#preload h2 {
+  text-align: center; }
+
+.loader-image-wrapper {
+  width: 200px;
+  margin: 0 auto; }
+
+.loader-text-wrapper {
+  position: relative;
+  z-index: 2;
+  margin-top: -20px; }
+
+.pdp-hero-info-wrapper {
+  position: sticky;
+  height: 110.4vh;
+  z-index: 1; }
+
+div#images {
+  height: 200vh;
+  z-index: 0;
+  position: absolute;
+  margin-top: 50px;
+  top: 0;
+  width: 100%;
+  pointer-events: none; }
+
+.sequencer {
+  position: -webkit-sticky;
+  position: sticky;
+  display: block;
+  top: 50px;
+  /*min-height: 100%;
+	width: auto;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%)*/ }
+
+div#images2 {
+  height: 195vh;
+  z-index: 0;
+  position: absolute;
+  margin-top: 0px;
+  top: 0;
+  width: 100%;
+  pointer-events: none; }
+
+.sequencer2 {
+  position: -webkit-sticky;
+  position: sticky;
+  display: block;
+  top: 6px;
+  /*min-height: 100%;
+	width: auto;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%)*/ }
+
+.pdp-hi {
+  color: var(--shade400);
+  position: absolute;
+  margin-bottom: 30px;
+  margin-top: -140px;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity .3s ease-in-out; }
+
+.product-title-pdp {
+  margin-top: 80px;
+  margin-left: -8px;
+  margin-bottom: -180px;
+  font-size: 160px;
+  position: sticky;
+  top: 135px; }
+
+.pdp-price-lockup {
+  position: fixed;
+  right: 6%;
+  z-index: 5;
+  margin-top: 140px;
+  transition: all .3s ease-in-out; }
+
+.pdp-price-lockup-left {
+  display: inline-block; }
+
+.pdp-price-lockup-right {
+  display: inline-block;
+  position: relative;
+  top: -30px;
+  margin-left: 20px; }
+
+/*.flipbook-wrapper {
+	height: 300vh;
+  	//background: #000;
+}
+
+#flipbook-iphone {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: block;
+  max-width: 100vw;
+  max-height: 100vh;
+  min-width: 1440px;
+}*/
+/*Flipbook V2
+.scroll-container {
+	height: 100vh;
+	background: black;
+  }
+
+  .speak {
+	margin: 150vh 0;
+  }
+  .speak:first-child {
+	margin-top: -50vh;
+  }
+
+  .speak[data-scroll] {
+	transform: translatey(calc(var(--viewport-y) * 30vh));
+	opacity: calc(var(--visible-y));
+  }
+
+  .scroll-sequence__content {
+	padding: 4em;
+  }
+
+  .scroll-sequence {
+	position: sticky;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	z-index: -5;
+	height: 100vh;
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+  }*/

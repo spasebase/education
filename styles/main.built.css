@@ -1,0 +1,177 @@
+/* .section-content {
+	@include viewport-content;
+	text-align: center;
+  }
+
+  // use named SassKit typography: https://standards.apple.com/system-library/#pattern-typography
+  .headline {
+	@include typography(headline);
+  }
+
+  .intro {
+	@include typography(intro);
+  }
+
+  .label {
+	@include typography(label);
+  }
+
+  .body-reduced {
+	@include typography(body-reduced);
+  }
+
+  // ============================================
+// Section styles
+// ============================================
+
+.section-hero {
+	padding: 150px 0 120px;
+
+	.intro {
+	  margin-bottom: 45px;
+	}
+  }
+
+  .section-routing,
+  .section-callout {
+	padding: 60px 0 80px;
+  }
+
+  .section-routing {
+	// use swatch names from https://standards.apple.com/system-library/#pattern-swatches
+	background: color(fill-secondary);
+
+	.column {
+	  padding: 0 20px;
+
+	  @include viewport(medium) {
+		padding: 0 10px;
+	  }
+
+	  @include viewport(small) {
+		padding: 50px 0;
+	  }
+
+	  &:first-child {
+		  // use logical mixin instead of hard-coding padding-left/right: https://frontier.apple.com/docs/ac-sasskit/latest/sass/locale.html#mixin-padding-inline-start
+		@include padding-inline-start(0);
+
+		@include viewport(small) {
+		  padding-top: 0;
+		}
+	  }
+
+	  &:last-child {
+		// use logical mixins instead of hard-coding padding-left/right: https://frontier.apple.com/docs/ac-sasskit/latest/sass/locale.html#mixin-padding-inline-start
+		@include padding-inline-end(0);
+
+		@include viewport(small) {
+		  padding-bottom: 0;
+		}
+	  }
+	}
+  }
+
+  .section-callout {
+	.column {
+	  @include viewport(small) {
+		padding: 20px 0;
+	  }
+	}
+  }
+
+
+// ============================================
+// SassKit Modules / External Modules
+// ============================================
+
+@import 'ac-sasskit/modules/button'; // include styles for button: https://standards.apple.com/element-library/#pattern-button
+@import 'ac-sasskit/modules/callout'; // include styles for callout: https://standards.apple.com/element-library/#pattern-callout
+
+
+
+// ============================================
+// Project Styles
+// ============================================
+
+// Shared styles
+.section-content {
+	@include viewport-content; // create content container: https://frontier.apple.com/docs/ac-sasskit/latest/sass/viewports.html#mixin-viewport-content
+	text-align:center;
+}
+
+.eyebrow-product-reduced {
+	@include typography(eyebrow); // use named SassKit typography: https://standards.apple.com/system-library/#pattern-typography
+}
+
+.headline {
+	@include typography(headline); // use named SassKit typography: https://standards.apple.com/system-library/#pattern-typography
+}
+
+.intro {
+	@include typography(intro); // use named SassKit typography: https://standards.apple.com/system-library/#pattern-typography
+}
+
+.label {
+	@include typography(label); // use named SassKit typography: https://standards.apple.com/system-library/#pattern-typography
+}
+
+.body-reduced {
+	@include typography(body-reduced); // use named SassKit typography: https://standards.apple.com/system-library/#pattern-typography
+}
+
+
+// Section specific styles
+.section-hero {
+	padding: 150px 0 120px;
+
+	.intro {
+		margin-bottom: 45px;
+	}
+}
+
+.section-routing,
+.section-callout {
+	padding: 60px 0 80px;
+}
+
+.section-routing {
+	background: color(fill-secondary); // use swatch names from https://standards.apple.com/system-library/#pattern-swatches
+
+	.column {
+		padding: 0 20px;
+
+		@include viewport(medium) {
+			padding: 0 10px;
+		}
+
+		@include viewport(small) {
+			padding: 50px 0;
+		}
+
+		&:first-child {
+			@include padding-inline-start(0); // use logical mixin instead of hard-coding padding-left/right: https://frontier.apple.com/docs/ac-sasskit/latest/sass/locale.html#mixin-padding-inline-start
+
+			@include viewport(small) {
+				padding-top: 0;
+			}
+		}
+
+		&:last-child {
+			@include padding-inline-end(0); // use logical mixins instead of hard-coding padding-left/right: https://frontier.apple.com/docs/ac-sasskit/latest/sass/locale.html#mixin-padding-inline-start
+
+			@include viewport(small) {
+				padding-bottom: 0;
+			}
+		}
+	}
+}
+
+.section-callout {
+	.column {
+		@include viewport(small) {
+			padding: 20px 0;
+		}
+	}
+}
+*/

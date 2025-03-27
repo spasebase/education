@@ -1,0 +1,326 @@
+.title-page {
+  margin-top: 20px; }
+
+@media only screen and (max-width: 663px) {
+  .title-page {
+    margin-top: 14px; } }
+
+.title-collection {
+  margin-top: 40px; }
+
+@media only screen and (max-width: 663px) {
+  .title-collection {
+    margin-top: 14px;
+    font-size: var(--_28-b-font-size);
+    line-height: 32px; } }
+
+.title-section {
+  margin: 100px 0 34px 0; }
+
+@media only screen and (max-width: 663px) {
+  .title-section {
+    margin: 56px 0 20px 0; } }
+
+.title-section-small {
+  margin: 100px 0 28px 0; }
+
+@media only screen and (max-width: 663px) {
+  .title-section-small {
+    margin: 56px 0 10px 0; } }
+
+.quick-links-wrapper {
+  margin-top: 54px; }
+
+.quick-links-title {
+  margin-right: 20px;
+  height: 36px;
+  display: inline-flex;
+  vertical-align: middle; }
+
+.three-up-section {
+  float: left; }
+
+.section1 {
+  width: 40%; }
+
+.section2 {
+  width: 30%;
+  box-sizing: border-box;
+  padding-right: 20px; }
+
+.section3 {
+  width: 30%;
+  box-sizing: border-box; }
+
+@media only screen and (max-width: 1240px) {
+  .section1 {
+    width: 45%; }
+  .section2 {
+    width: 27.5%; }
+  .section3 {
+    width: 27.5%; } }
+
+@media only screen and (max-width: 1180px) {
+  .section1 {
+    width: 60%; }
+  .section2 {
+    width: 40%; }
+  .section3 {
+    width: 100%; } }
+
+@media only screen and (max-width: 860px) {
+  .section1 {
+    width: 65%; }
+  .section2 {
+    width: 35%; } }
+
+@media only screen and (max-width: 800px) {
+  .section1 {
+    width: 100%; }
+  .section2 {
+    width: 100%; } }
+
+.offer-wrapper {
+  display: inline-block;
+  margin-bottom: 16px;
+  cursor: pointer;
+  transition: all .2s ease-in-out; }
+
+@media only screen and (max-width: 663px) {
+  .offer-wrapper {
+    margin-bottom: 10px; } }
+
+.offer-image {
+  width: 16px;
+  height: 16px;
+  float: left;
+  margin-right: 6px;
+  margin-top: 1px; }
+
+.offer-text {
+  color: var(--shade600);
+  float: left;
+  transition: all .2s ease-in-out; }
+
+.offer-wrapper:hover .offer-text {
+  color: var(--black); }
+
+.section-affordability {
+  margin-top: 100px; }
+
+.section-affordability .title-section {
+  margin-top: 0;
+  margin-bottom: 0; }
+
+.row .col .affordability-wrapper {
+  margin-top: 44px;
+  padding-right: 3vw; }
+
+@media only screen and (max-width: 1440px) {
+  .row .col .affordability-wrapper {
+    min-height: 190px; } }
+
+.row .col .affordability-wrapper:last-of-type {
+  padding-right: 3vw; }
+
+@media only screen and (max-width: 663px) {
+  .row .col .affordability-wrapper:last-of-type {
+    padding-right: 4vw; } }
+
+.affordability-icon {
+  width: 32px;
+  margin-bottom: 10px; }
+
+@media only screen and (max-width: 663px) {
+  .affordability-icon {
+    width: 26px;
+    margin-bottom: 6px; } }
+
+.affordability-text {
+  color: var(--shade600);
+  margin-top: 10px; }
+
+@media only screen and (max-width: 663px) {
+  .affordability-text {
+    margin-top: 0px; } }
+
+.affordability-wrapper .link-main {
+  margin-top: 16px;
+  display: block; }
+
+@media only screen and (max-width: 663px) {
+  .affordability-wrapper .link-main {
+    margin-top: 10px; } }
+
+.title-link-wrapper {
+  position: relative; }
+
+.title-link-content {
+  position: absolute;
+  z-index: 1;
+  right: 0;
+  margin-top: -55px;
+  display: inline-flex; }
+
+.title-link-content__solo {
+  right: 5%; }
+
+@media only screen and (max-width: 663px) {
+  .title-link-content {
+    margin-top: -38px; } }
+
+.title-link__header {
+  margin-top: 34px; }
+
+@media only screen and (max-width: 663px) {
+  .title-link__header {
+    margin-top: 19px; } }
+
+.title-link__header img {
+  margin-top: -45px; }
+
+.title-link__header-single-line img {
+  margin-top: -31px; }
+
+.title-link__header-pills {
+  margin-top: 20px;
+  margin-right: -14px; }
+
+.contextual-title {
+  margin-right: 7px; }
+
+.product-interactions-wrapper {
+  width: auto;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  z-index: 2;
+  margin-top: 59vh;
+  height: 100px; }
+
+.product-interaction {
+  width: 48px;
+  height: 48px;
+  cursor: pointer;
+  background: var(--shade150);
+  border-radius: 90px;
+  padding: 1px;
+  margin: 0px 24px 180px 24px;
+  transition: all .2s ease-in-out; }
+
+.product-interaction:hover {
+  background: var(--shade100);
+  transform: scale(1.05); }
+
+.product-interaction-icon {
+  width: 32px;
+  height: 32px;
+  display: flex;
+  margin: 8px auto; }
+
+.key-feature-wrapper {
+  width: calc(88% + 28px);
+  transition: all .2s ease-in-out; }
+
+.key-feature-wrapper .row .col {
+  padding-right: 10px;
+  padding-left: 10px; }
+
+.key-feature-tall {
+  height: 580px; }
+
+@media only screen and (max-width: 993px) {
+  .key-feature-tall {
+    height: 450px; } }
+
+.key-feature-short {
+  height: 420px; }
+
+@media only screen and (max-width: 993px) {
+  .key-feature-short {
+    height: 350px; } }
+
+.key-feature-mini {
+  height: 280px; }
+
+@media only screen and (max-width: 993px) {
+  .key-feature-mini {
+    height: 215px; } }
+
+.key-feature-text {
+  transition: all 0s ease-in-out; }
+
+.key-feature-text-center {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  transition: all 0s ease-in-out; }
+
+.key-feature-text-bottom {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  height: 100%;
+  transition: all 0s ease-in-out; }
+
+.product-overview__wrapper {
+  width: 100vw;
+  height: 100vh;
+  background: grey;
+  background-image: url(../img/photos/od-overview-bg.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  position: relative; }
+
+.product-overview__text {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  height: 85%;
+  margin: auto auto;
+  text-align: center;
+  justify-content: center;
+  position: relative;
+  z-index: 2;
+  opacity: 1;
+  pointer-events: none;
+  -webkit-transition: opacity 200ms ease-in-out;
+  transition: opacity 200ms ease-in-out; }
+
+.product-overview__wrapper .button-plus {
+  right: 0;
+  left: 0;
+  margin: 0 auto;
+  bottom: 42vh;
+  width: 40px;
+  height: 40px;
+  padding: 8px; }
+
+.product-overview__wrapper:hover .button-plus {
+  background: rgba(255, 255, 255, 0.34); }
+
+.overview-video-wrapper {
+  display: none;
+  background: #F1EFF1;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  position: absolute;
+  pointer-events: none; }
+
+video.bg-video.overview-video {
+  display: block;
+  z-index: 5;
+  position: absolute;
+  width: 80%;
+  height: 100%;
+  top: 0;
+  margin: 0 auto;
+  left: 0;
+  right: 0; }

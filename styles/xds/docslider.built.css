@@ -1,0 +1,732 @@
+/**-----------------------
+
+ docSlider.js - ver.3.0.1
+ URL : https://prjct-samwest.github.io/docSlider/
+ created by SamWest
+ Copyright (c) 2020 SamWest.
+ This plugin is released under the MIT License.
+
+ -----------------------**/
+/* CHANGE THE PAGER STYLE */
+.docSlider-pager {
+  position: fixed;
+  z-index: 11;
+  top: 50%;
+  left: calc(100vw - 40px);
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(-50%);
+  -webkit-transition-property: opacity;
+  transition-property: opacity;
+  -webkit-transition-delay: 250ms;
+  transition-delay: 250ms;
+  -webkit-transition-duration: 500ms;
+  transition-duration: 500ms;
+  -webkit-transition-timing-function: cubic-bezier(0.4, 0.2, 0, 1);
+  transition-timing-function: cubic-bezier(0.4, 0.2, 0, 1); }
+
+/* CHANGE THE BUTTON STYLE */
+.docSlider-button {
+  height: 8px;
+  width: 8px;
+  padding: 0;
+  border-radius: 8px;
+  cursor: pointer;
+  display: block;
+  margin: 12px 0;
+  background-color: #333;
+  opacity: .25;
+  appearance: none;
+  border: none;
+  box-sizing: border-box;
+  transition: all 600ms cubic-bezier(0.4, 0.2, 0, 1); }
+
+.docSlider-button.selected {
+  opacity: 1;
+  height: 36px; }
+
+.docSlider-button:active {
+  outline: none; }
+
+/**------------------------------
+	REWRITING IS NOT RECOMMENDED
+   -----------------------------**/
+.docSlider,
+.docSlider-inner,
+.docSlider-page {
+  outline: none; }
+
+.docSlider:active,
+.docSlider-inner:active,
+.docSlider-page:active {
+  outline: none; }
+
+.docSlider {
+  overflow: hidden;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 100vw;
+  z-index: 11;
+  background: white;
+  -webkit-transition: all 500ms cubic-bezier(0.4, 0.2, 0, 1);
+  transition: all 500ms cubic-bezier(0.4, 0.2, 0, 1); }
+
+.docSlider-Mat {
+  left: 0;
+  opacity: 0;
+  pointer-events: none;
+  transform: none;
+  will-change: none;
+  background: none;
+  -webkit-transition: all 500ms cubic-bezier(0.4, 0.2, 0, 1) 500ms;
+  transition: all 500ms cubic-bezier(0.4, 0.2, 0, 1) 500ms; }
+
+.docSlider-Mat .galleryContent {
+  width: 90%;
+  height: 86vh;
+  border-radius: 32px;
+  margin: 7vh 5%;
+  right: 0;
+  overflow: hidden; }
+
+.docSlider-Mat:after {
+  content: '';
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  position: absolute;
+  z-index: -1;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(3px); }
+
+.docSlider-Mat .docSlider-pager .docSlider-button {
+  background-color: white; }
+
+.docSlider-inner {
+  width: inherit;
+  height: inherit;
+  position: fixed;
+  top: 0;
+  left: 100vw;
+  opacity: 0;
+  -webkit-transition-property: left, opacity;
+  transition-property: left, opacity;
+  -webkit-transition-delay: 0s, 550ms;
+  transition-delay: 0s, 550ms;
+  -webkit-transition-duration: 500ms, 500ms;
+  transition-duration: 500ms, 500ms;
+  -webkit-transition-timing-function: cubic-bezier(0.4, 0.2, 0, 1);
+  transition-timing-function: cubic-bezier(0.4, 0.2, 0, 1); }
+
+.docSlider-Mat .docSlider-inner {
+  left: 0; }
+
+.docSlider-page {
+  height: inherit;
+  width: inherit;
+  overflow: hidden;
+  position: absolute;
+  overflow-scrolling: touch; }
+
+.galleryContent {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  font-size: 2em; }
+
+.gallery-in {
+  opacity: 1;
+  pointer-events: auto; }
+
+.mat-gallery-out {
+  transition-delay: 0s;
+  opacity: 0; }
+
+.gallery-in .docSlider-inner,
+.gallery-in.docSlider {
+  left: 0; }
+
+.gallery-in .docSlider-pager {
+  opacity: 1;
+  pointer-events: auto; }
+
+.gallery-in .docSlider-inner {
+  opacity: 1; }
+
+#button-close-gallery {
+  position: fixed;
+  cursor: pointer;
+  -webkit-transition: all 500ms cubic-bezier(0.4, 0.2, 0, 1);
+  transition: all 500ms cubic-bezier(0.4, 0.2, 0, 1); }
+
+.close-in {
+  opacity: 1;
+  pointer-events: auto;
+  z-index: 110;
+  -webkit-transition: all 500ms cubic-bezier(0.4, 0.2, 0, 1);
+  transition: all 500ms cubic-bezier(0.4, 0.2, 0, 1); }
+
+.force-flickity-center .flickity-viewport .flickity-slider {
+  transform: translateX(0%) !important; }
+
+.galleryContent .gal {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  transition: all 800ms cubic-bezier(0.4, 0.2, 0, 1); }
+
+.gal1 {
+  background-image: url(../img/photos/gal1.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat; }
+
+.gal2 {
+  background-image: url(../img/photos/gal2.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat; }
+
+.gal3 {
+  background-image: url(../img/photos/gal3.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat; }
+
+.gal5 {
+  background-image: url(../img/photos/gal5.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat; }
+
+.gal-content-left {
+  width: 70%;
+  float: left;
+  position: relative;
+  background: white;
+  height: 100%;
+  padding: 48px;
+  box-sizing: border-box; }
+
+.gal-content-right {
+  width: 30%;
+  float: right;
+  position: relative;
+  background: var(--shade100);
+  height: 100%;
+  padding: 48px;
+  box-sizing: border-box; }
+
+.gal-subtitle {
+  margin-top: 8px; }
+
+.gal-key-wrapper {
+  width: 280px;
+  margin-top: 60px; }
+
+.gal-key-item {
+  width: 100%;
+  height: 48px;
+  margin-bottom: 40px; }
+
+.key-image {
+  float: left;
+  width: 48px;
+  height: 100%; }
+
+.key-text-wrapper {
+  float: left;
+  margin-top: 4px;
+  margin-left: 16px; }
+
+.key-subtext {
+  margin-top: 3px; }
+
+.gal-interaction-wrapper {
+  margin-top: 80px;
+  margin-left: -30px;
+  width: 300px; }
+
+.gal-interaction-wrapper .product-interactions-wrapper {
+  margin-top: 0px;
+  position: absolute;
+  bottom: -4px; }
+
+.review-wrapper {
+  position: absolute;
+  bottom: 36px;
+  width: 76%; }
+
+.review-prop-item {
+  width: 100%;
+  height: 30px;
+  clear: both;
+  float: none; }
+
+.review-prop-item:nth-child(1) {
+  margin-top: 20px; }
+
+.review-prop-item-image {
+  float: left; }
+
+.review-prop-item-text {
+  float: left;
+  margin-top: 9px;
+  margin-left: 6px; }
+
+.review-new-price {
+  margin-top: 6px;
+  margin-bottom: 16px; }
+
+.save-apple-item-subtext {
+  margin-top: 6px;
+  margin-bottom: 24px;
+  width: 80%; }
+
+.review-action-wrapper {
+  width: 100%;
+  height: 60px;
+  clear: both;
+  margin-top: 30px; }
+
+.review-action-wrapper .button-buy {
+  width: calc(100% - 85px);
+  min-width: 120px;
+  float: left;
+  left: 0;
+  position: relative;
+  margin-left: 0;
+  margin-top: 0;
+  margin-bottom: 0px;
+  margin-right: 10px; }
+
+.review-action-wrapper .button-heart {
+  float: left; }
+
+.savings-swap {
+  opacity: 0;
+  transition: all .3s ease-in-out;
+  display: none; }
+
+.savings-in {
+  opacity: 1;
+  display: block; }
+
+.price-swap-wrapper {
+  position: absolute;
+  bottom: 220px; }
+
+.gal-mat-bg {
+  height: 100%;
+  right: 0;
+  top: 0;
+  width: 60%;
+  position: absolute;
+  background-size: cover;
+  background-repeat: no-repeat; }
+
+.mat-bg1 {
+  background-image: url("../img/photos/mat1.png"); }
+
+.mat-bg2 {
+  background-image: url("../img/photos/mat2.png"); }
+
+.mat-bg3 {
+  background-image: url("../img/photos/mat3.png"); }
+
+.mat-bg4 {
+  background-image: url("../img/photos/mat4.png"); }
+
+.mat-bg5 {
+  background-image: url("../img/photos/mat5.png"); }
+
+/**-----------------------
+
+//////////////////INSTANCE 2/////////////////////
+//////////////////INSTANCE 2/////////////////////
+//////////////////INSTANCE 2/////////////////////
+//////////////////INSTANCE 2/////////////////////
+//////////////////INSTANCE 2/////////////////////
+//////////////////INSTANCE 2/////////////////////
+//////////////////INSTANCE 2/////////////////////
+//////////////////INSTANCE 2/////////////////////
+//////////////////INSTANCE 2/////////////////////
+//////////////////INSTANCE 2/////////////////////
+//////////////////INSTANCE 2/////////////////////
+//////////////////INSTANCE 2/////////////////////
+
+ -----------------------**/
+/* CHANGE THE PAGER STYLE */
+.docSlider2-pager {
+  position: fixed;
+  z-index: 11;
+  top: 50%;
+  left: calc(100vw - 40px);
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(-50%);
+  -webkit-transition-property: opacity;
+  transition-property: opacity;
+  -webkit-transition-delay: 250ms;
+  transition-delay: 250ms;
+  -webkit-transition-duration: 500ms;
+  transition-duration: 500ms;
+  -webkit-transition-timing-function: cubic-bezier(0.4, 0.2, 0, 1);
+  transition-timing-function: cubic-bezier(0.4, 0.2, 0, 1); }
+
+/* CHANGE THE BUTTON STYLE */
+.docSlider2-button {
+  height: 8px;
+  width: 8px;
+  padding: 0;
+  border-radius: 8px;
+  cursor: pointer;
+  display: block;
+  margin: 12px 0;
+  background-color: #333;
+  opacity: .25;
+  appearance: none;
+  border: none;
+  box-sizing: border-box;
+  transition: all 600ms cubic-bezier(0.4, 0.2, 0, 1); }
+
+.docSlider2-button.selected {
+  opacity: 1;
+  height: 36px; }
+
+.docSlider2-button:active {
+  outline: none; }
+
+/**------------------------------
+	REWRITING IS NOT RECOMMENDED
+   -----------------------------**/
+.docSlider2,
+.docSlider2-inner,
+.docSlider2-page {
+  outline: none; }
+
+.docSlider2:active,
+.docSlider2-inner:active,
+.docSlider2-page:active {
+  outline: none; }
+
+.docSlider2 {
+  overflow: hidden;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 100vw;
+  z-index: 11;
+  background: white;
+  -webkit-transition: all 500ms cubic-bezier(0.4, 0.2, 0, 1);
+  transition: all 500ms cubic-bezier(0.4, 0.2, 0, 1); }
+
+.docSlider2-inner {
+  width: inherit;
+  height: inherit;
+  position: fixed;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  -webkit-transition-property: left, opacity;
+  transition-property: left, opacity;
+  -webkit-transition-delay: 0s, 550ms;
+  transition-delay: 0s, 550ms;
+  -webkit-transition-duration: 500ms, 500ms;
+  transition-duration: 500ms, 500ms;
+  -webkit-transition-timing-function: cubic-bezier(0.4, 0.2, 0, 1);
+  transition-timing-function: cubic-bezier(0.4, 0.2, 0, 1); }
+
+.docSlider2-page {
+  height: inherit;
+  width: inherit;
+  overflow: hidden;
+  position: absolute;
+  overflow-scrolling: touch; }
+
+.docSlider-Feature {
+  left: 0;
+  opacity: 0;
+  pointer-events: none;
+  transform: none;
+  will-change: none;
+  background: none;
+  -webkit-transition: all 500ms cubic-bezier(0.4, 0.2, 0, 1) 500ms;
+  transition: all 500ms cubic-bezier(0.4, 0.2, 0, 1) 500ms; }
+
+.docSlider-Feature .galleryContent {
+  width: 100%;
+  height: 100vh;
+  border-radius: 0;
+  margin: 0;
+  right: 0;
+  padding: 64px 80px;
+  box-sizing: border-box; }
+
+.docSlider-Feature .docSlider2-pager .docSlider2-button {
+  background-color: grey; }
+
+.mat-gallery-out2 {
+  transition-delay: 0s;
+  opacity: 0; }
+
+.gallery-in2 {
+  opacity: 1;
+  pointer-events: auto; }
+
+.gallery-in2 .docSlider2-inner,
+.gallery-in2.docSlider2 {
+  left: 0;
+  opacity: 1; }
+
+.gallery-in2 .docSlider2-pager {
+  opacity: 1;
+  pointer-events: auto;
+  mix-blend-mode: luminosity; }
+
+.gallery-in2 .docSlider2-inner {
+  opacity: 1;
+  left: 0; }
+
+.close-in2 {
+  opacity: 1;
+  pointer-events: auto;
+  z-index: 110;
+  -webkit-transition: all 500ms cubic-bezier(0.4, 0.2, 0, 1);
+  transition: all 500ms cubic-bezier(0.4, 0.2, 0, 1); }
+
+.key-feature-blockwrap {
+  width: 48%;
+  position: relative;
+  z-index: 1; }
+
+.key-feature-statement {
+  margin-top: 108px; }
+
+.key-feature-point {
+  margin-top: 24px;
+  width: 80%; }
+
+.key-feature-lrg-image {
+  position: absolute;
+  float: right;
+  right: 0;
+  bottom: 0;
+  width: 60%;
+  height: 100%; }
+
+.blockwrap-right {
+  width: 46%;
+  margin-top: 80px;
+  float: right; }
+
+.lrg-image-left {
+  left: 0;
+  width: 56%;
+  height: 96%; }
+
+.feature-expand-bg1 {
+  background-color: black; }
+
+.feature-expand-bg2 {
+  background-color: #E2F4DE; }
+
+.feature-expand-bg3 {
+  background-color: #EDEEF0; }
+
+.feature-expand-bg4 {
+  background-color: black; }
+
+.feature-expand-bg5 {
+  background-color: #F2F2F2; }
+
+.feature-expand-bg6 {
+  background-color: #1D1D1F; }
+
+.feature-expand-bg7 {
+  background-color: #F3F1F4; }
+
+.feature-expand-bg8 {
+  background-color: black; }
+
+.feature-expand-bg9 {
+  background-color: #B3CAD7; }
+
+.feature-expand-bg10 {
+  background-color: #EDEEF0; }
+
+.feature-expand-bg11 {
+  background-color: black; }
+
+/**-----------------------
+
+//////////////////INSTANCE 3/////////////////////
+//////////////////INSTANCE 3/////////////////////
+//////////////////INSTANCE 3/////////////////////
+//////////////////INSTANCE 3/////////////////////
+//////////////////INSTANCE 3/////////////////////
+//////////////////INSTANCE 3/////////////////////
+//////////////////INSTANCE 3/////////////////////
+//////////////////INSTANCE 3/////////////////////
+//////////////////INSTANCE 3/////////////////////
+//////////////////INSTANCE 3/////////////////////
+//////////////////INSTANCE 3/////////////////////
+//////////////////INSTANCE 3/////////////////////
+
+ -----------------------**/
+/* CHANGE THE PAGER STYLE */
+.docSlider3-pager {
+  position: fixed;
+  z-index: 11;
+  top: 50%;
+  left: calc(100vw - 40px);
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(-50%);
+  -webkit-transition-property: opacity;
+  transition-property: opacity;
+  -webkit-transition-delay: 250ms;
+  transition-delay: 250ms;
+  -webkit-transition-duration: 500ms;
+  transition-duration: 500ms;
+  -webkit-transition-timing-function: cubic-bezier(0.4, 0.2, 0, 1);
+  transition-timing-function: cubic-bezier(0.4, 0.2, 0, 1); }
+
+/* CHANGE THE BUTTON STYLE */
+.docSlider3-button {
+  height: 8px;
+  width: 8px;
+  padding: 0;
+  border-radius: 8px;
+  cursor: pointer;
+  display: block;
+  margin: 12px 0;
+  background-color: #333;
+  opacity: .25;
+  appearance: none;
+  border: none;
+  box-sizing: border-box;
+  transition: all 600ms cubic-bezier(0.4, 0.2, 0, 1); }
+
+.docSlider3-button.selected {
+  opacity: 1;
+  height: 36px; }
+
+.docSlider3-button:active {
+  outline: none; }
+
+/**------------------------------
+	REWRITING IS NOT RECOMMENDED
+   -----------------------------**/
+.docSlider3,
+.docSlider3-inner,
+.docSlider3-page {
+  outline: none; }
+
+.docSlider3:active,
+.docSlider3-inner:active,
+.docSlider3-page:active {
+  outline: none; }
+
+.docSlider3 {
+  overflow: hidden;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 100vw;
+  z-index: 11;
+  background: white;
+  -webkit-transition: all 500ms cubic-bezier(0.4, 0.2, 0, 1);
+  transition: all 500ms cubic-bezier(0.4, 0.2, 0, 1); }
+
+.docSlider3-inner {
+  width: inherit;
+  height: inherit;
+  position: fixed;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  -webkit-transition-property: left, opacity;
+  transition-property: left, opacity;
+  -webkit-transition-delay: 0s, 550ms;
+  transition-delay: 0s, 550ms;
+  -webkit-transition-duration: 500ms, 500ms;
+  transition-duration: 500ms, 500ms;
+  -webkit-transition-timing-function: cubic-bezier(0.4, 0.2, 0, 1);
+  transition-timing-function: cubic-bezier(0.4, 0.2, 0, 1); }
+
+.docSlider3-page {
+  height: inherit;
+  width: inherit;
+  overflow: hidden;
+  position: absolute;
+  overflow-scrolling: touch; }
+
+.gallery-in3 {
+  opacity: 1;
+  pointer-events: auto; }
+
+.gallery-in3 .docSlider3-inner,
+.gallery-in3.docSlider3 {
+  left: 0;
+  opacity: 1;
+  pointer-events: auto; }
+
+.gallery-in3 .docSlider3-pager {
+  opacity: 1;
+  pointer-events: auto;
+  mix-blend-mode: luminosity; }
+
+.gallery-in3 .docSlider3-inner {
+  opacity: 1;
+  left: 0; }
+
+.docSlider3-Mat {
+  left: 0;
+  opacity: 0;
+  pointer-events: none;
+  transform: none;
+  will-change: none;
+  background: none;
+  -webkit-transition: all 500ms cubic-bezier(0.4, 0.2, 0, 1) 500ms;
+  transition: all 500ms cubic-bezier(0.4, 0.2, 0, 1) 500ms; }
+
+.docSlider3-Mat .galleryContent {
+  width: 90%;
+  height: 86vh;
+  border-radius: 32px;
+  margin: 7vh 5%;
+  right: 0;
+  overflow: hidden; }
+
+.docSlider3-Mat:after {
+  content: '';
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  position: absolute;
+  z-index: -1;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(3px); }
+
+.docSlider3-Mat .docSlider3-pager .docSlider3-button {
+  background-color: white; }
+
+.docSlider3-Mat .docSlider3-inner {
+  left: 0; }
+
+.digimat3 .flickity-viewport {
+  padding-bottom: 50vh;
+  margin-bottom: -50vh; }
+
+.mat-gallery-out3 {
+  transition-delay: 0s !important;
+  opacity: 0; }

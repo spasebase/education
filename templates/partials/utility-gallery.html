@@ -1,0 +1,53 @@
+<div class="close-section" id="button-close-gallery">
+	<div class="button-close" onclick="galleryClose(); remove(this)" style="background: rgba(0, 0, 0, 0.3);">
+		<img src="img/ui-close.svg"/>
+	</div>
+</div>
+<div class="docSlider" id="docSliderGallery">
+    <div class="gallerySection" id="jumpGalTop">
+        <div class="galleryContent">
+			<div class="gal gal1"></div>
+		</div>
+    </div>
+    <div class="gallerySection">
+        <div class="galleryContent">
+			<div class="gal gal2"></div>
+		</div>
+    </div>
+    <div class="gallerySection">
+        <div class="galleryContent">
+			<div class="gal gal3"></div>
+		</div>
+    </div>
+    <div class="gallerySection">
+        <div class="galleryContent">
+			<div class="gal gal4">
+				<video playsinline autoplay muted loop>
+				<source src="./img/videos/gal4.mp4" type="video/mp4">
+				Your browser does not support the video tag.
+			</video>
+			</div>
+		</div>
+    </div>
+	<div class="gallerySection">
+        <div class="galleryContent">
+			<div class="gal gal5"></div>
+		</div>
+    </div>
+	<div class="gallerySection">
+        <div class="galleryContent">
+			<div class="gal gal6">
+				<div id="playbutton" class="button-play" onclick="playVid();">
+					<img src="img/ui-play.svg">
+				</div>
+				<div id="pausebutton" class="button-play" onclick="pauseVid();" style="display:none;">
+					<img src="img/ui-pause.svg">
+				</div>
+				<video class="bg-video" muted id="unbox">
+				<source src="./img/videos/gal6.mp4" type="video/mp4">
+				Your browser does not support the video tag.
+				</video>
+			</div>
+		</div>
+    </div>
+</div>
